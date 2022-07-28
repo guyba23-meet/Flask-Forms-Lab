@@ -10,7 +10,14 @@
 </head>
 <body>
 
+{% if name in facebook_friends %}
+<h1 style='color: white;'> {{name}} is a real friend </h1>
+{% else %}
+<h1 style='color:white;'> {{name}} is not a real friend </h1>
 
+
+
+<h1> {{%friend_exists%}} </h1>
 
 </body>
 </html>
