@@ -16,7 +16,7 @@ facebook_friends=["Loai","Yonathan","Adan", "George", "Fouad", "Celina", "Guy"]
 def home():
 	return render_template('home.html', facebook_friends= facebook_friends)
 
-@app.route('/friend_exists/<string: name>', methods = ['GET', 'POST'])  # '/' for the default page
+@app.route('/friend_exists/<string:name>', methods = ['GET', 'POST'])  # '/' for the default page
 def friend_exists(name):
 	if name in facebook_friends:
 		return render_template('friend_exists.html', name = name, facebook_friends= facebook_friends, isfriend = True)
@@ -37,7 +37,7 @@ def login():
 
 
 
-if __name__ == "__main__":  # Makes sure this is the main process
+if __name__ == '__main__':  # Makes sure this is the main process
 	app.run( # Starts the site
 		debug=True
 	)
